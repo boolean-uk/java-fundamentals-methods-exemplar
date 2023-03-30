@@ -30,17 +30,19 @@ public class Exercise extends ExerciseBase {
         return "Hello " + name + "!";
     }
 
+
     /*
         1. Increment a number
-        Complete this method so that it increases the number given by 1 and returns the result
+        Complete this method so that it increases the number given by 1 and outputs the result
      */
     public int increment(int number) {
-        return 0;
+        return number + 1;
+
     }
 
     /*
         2. Construct a friendly greeting
-        Complete this method so that it accepts a name as an input and returns a friendly greeting
+        Complete this method so that it accepts a name as an input and outputs a friendly greeting
         with a smiley face. Example input and output:
 
         Input  | Output
@@ -48,8 +50,8 @@ public class Exercise extends ExerciseBase {
         Nathan | Hi, Nathan :)
         Edward | Hi, Edward :)
      */
-    public String happilyGreet() {
-        return "Not implemented yet";
+    public String happilyGreet(String name) {
+        return "Hi, " + name + " :)";
     }
 
     /*
@@ -64,7 +66,13 @@ public class Exercise extends ExerciseBase {
         10, 13 | [10,11,12,13]
         -1, 1  | [-1,0,1]
      */
-
+    public int[] constructNumberArray(int lowest, int highest) {
+        int[] numbers = new int[highest-lowest+1];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = lowest + i;
+        }
+        return numbers;
+    }
 
 
 
@@ -80,8 +88,12 @@ public class Exercise extends ExerciseBase {
         disaster, 5 | DISASTER!!!!!
         error, 10   | ERROR!!!!!!!!!!
      */
-
-
-
+    public String shout(String word, int exclamations) {
+        word = word.toUpperCase();
+        for (int i = 0; i < exclamations; i++){
+            word += "!";
+        }
+        return word;
+    }
 
 }
